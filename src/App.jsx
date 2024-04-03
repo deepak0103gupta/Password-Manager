@@ -12,7 +12,7 @@ function App() {
       <Toaster />
       <Navbar />
 
-        <div className="min-h-[87vh]">      
+        <div className="min-h-[87vh] mt-5">      
           <Manager />
         </div>
 

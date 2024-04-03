@@ -73,9 +73,7 @@ function Manager() {
 
   return (
     <div>
-      <div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
-        <div class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_100%_200px,#d5c5ff,transparent)]"></div>
-      </div>
+      <div class="absolute inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]"></div>
 
       <div className=" p-2 md:p-0 md:mycontainer  ">
         <h1 className="text-4xl font-bold text-center ">
@@ -149,19 +147,19 @@ function Manager() {
           {passwordArray.length === 0 && <div>No Passwords to Show</div>}
           {passwordArray.length !== 0 && (
             <table className="table-auto w-full rounded-md overflow-hidden mb-10">
-              <thead className=" bg-purple-800 text-white">
+              <thead className=" bg-purple-800 text-white ">
                 <tr>
-                  <th className="py-2">Site</th>
-                  <th className="py-2">Username</th>
-                  <th className="py-2">Password</th>
-                  <th className="py-2">Actions</th>
+                  <th className="py-2 text-sm md:text-lg">Site</th>
+                  <th className="py-2 text-sm md:text-lg">Username</th>
+                  <th className="py-2 text-sm md:text-lg">Password</th>
+                  <th className="py-2 text-sm md:text-lg">Actions</th>
                 </tr>
               </thead>
               <tbody className="bg-purple-200">
                 {passwordArray.map((item, index) => {
                   return (
                     <tr key={index}>
-                      <td className="  border border-white py-2 text-center ">
+                      <td className="  border border-white py-2 text-center text-sm md:text-lg ">
                         <div className="flex justify-center items-center">
                           <a href={item.site} target="_blank">
                             {item.site}
@@ -176,7 +174,7 @@ function Manager() {
                           />
                         </div>
                       </td>
-                      <td className=" border border-white py-2 text-center ">
+                      <td className=" border border-white py-2 text-center text-sm md:text-lg ">
                         <div className="flex justify-center items-center">
                           <span>{item.username}</span>
                           <img
@@ -200,7 +198,7 @@ function Manager() {
                           />
                         </div>
                       </td>
-                      <td className=" border border-white py-2 text-center ">
+                      <td className=" border border-white py-2 text-center text-sm md:text-lg ">
                         <div className="flex justify-center items-center gap-x-2">
                           <span onClick={() => editPassword(item.id)}>
                             <img
